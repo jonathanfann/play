@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   function getQueryVariable(variable) {
          var query = decodeURI(window.location.search.substring(1), "UTF-8");
          var vars = query.split("&");
@@ -9,12 +8,18 @@ $(document).ready(function() {
          }
          return(false);
   }
-  src = getQueryVariable('src');
-  title = getQueryVariable('title');
-  if (getQueryVariable('bg')) {
-  bg = getQueryVariable('bg');
+  if (getQueryVariable('src')) {
+    src = getQueryVariable('src');
   } else {
-    bg = 'http://i.giphy.com/3oz8xrE0a7YZeEsRgI.gif'
+    src = 'http://kingtide.us/thanks/11%20Medicine.mp3'
+  }
+  if (getQueryVariable('title')) {
+    title = getQueryVariable('title');
+  }
+  if (getQueryVariable('bg')) {
+    bg = getQueryVariable('bg');
+  } else {
+    bg = 'http://i.giphy.com/3oz8xZJqyKWPiALTAA.gif'
   }
   if (src) {
     $("#player").attr("src", src);

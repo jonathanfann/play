@@ -19,8 +19,8 @@ html {
     overflow: hidden;
     background-color: #222426;
     /*background-image:url(http://i.giphy.com/xiYsBnEYwhhy8.gif);*/
-    background-size: contain;
-    background-repeat: repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
     position: relative;
 }
