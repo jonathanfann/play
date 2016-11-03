@@ -15,6 +15,8 @@ $(document).ready(function() {
   }
   if (getQueryVariable('title')) {
     title = getQueryVariable('title');
+  } else {
+    title = 'HTML5 AUDIO'
   }
   if (getQueryVariable('bg')) {
     bg = getQueryVariable('bg');
