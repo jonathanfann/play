@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="Play your music and whatnot">
+		<title>Play &#9835;</title>
+		<meta name="description" content="the land of the free and home of the whatnots">
+		<meta name="keywords" content="music player, audiojs, html5">
+		<link type="text/css" rel="stylesheet" href="./css/custom.css"/>
+</head>
+<body>
+<h1 id="title">Your Song &#9835;</h1>
+
+<audio id="player">
+  Your browser does not support the <code>audio</code> element.
+</audio>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="./js/audio.min.js"></script>
+<script>
+  audiojs.events.ready(function() {
+    var as = audiojs.createAll();
+  });
+  </script>
+<script src="./js/play.js"></script>
+</body>
+</html>

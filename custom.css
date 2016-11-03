@@ -1,0 +1,73 @@
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
+}
+
+#mygallery {
+  width:100%;
+  height:auto;
+  min-height:100vh;
+}
+
+.image-container {
+  float:left;
+  width:50%;
+  height:300px;
+  overflow:hidden;
+  transition:all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+}
+
+.image-container:hover, .image-container:active, .image-container:focus {
+  cursor:pointer;
+  transition:all ease-in-out 0.2s;
+  -webkit-transition: all ease-in-out 0.2s;
+  -moz-transition: all ease-in-out 0.2s;
+  -o-transition: all ease-in-out 0.2s;
+  -webkit-filter: contrast(200%);
+  filter: contrast(200%);
+}
+
+img {
+  width:100%;
+  display:inline-block;
+  clear: both;
+  height:auto;
+}
+
+.image-container.active {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100vh;
+}
+
+.image-container.active img {
+  min-height:100%; 
+}
+
+.image-container.active:hover {
+  -webkit-filter: contrast(100%) saturate(1);
+  filter: contrast(100%) saturate(1);
+}
+
+@media(max-width:768px) {
+  .image-container, .image-container.active {
+  float:left;
+  width:100%;
+  height:auto;
+  position:static;
+  }
+}

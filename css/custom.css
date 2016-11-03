@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+html, body, h1, h2, h3, h4, h5, h6, p, li, ul, span, small, audio {
+    font-family: 'Abril Fatface', Arial;
+    text-align: center;
+}
+
+h1 {
+    font-size: 100px;
+    text-transform: uppercase;
+    line-height: 80vh;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #222426;
+    /*background-image:url(http://i.giphy.com/xiYsBnEYwhhy8.gif);*/
+    background-size: contain;
+    background-repeat: repeat;
+    color: #fff;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.audiojs {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.audiojs audio {
+    position: absolute;
+    left: -1px;
+}
+
+.audiojs {
+    width: 100%;
+    height: 100px;
+    background: #FF7F50;
+    overflow: hidden;
+    font-family: monospace;
+    font-size: 18px;
+    background-image: none;
+    background-image: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+}
+
+.audiojs .play-pause {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    margin: 0px;
+    float: left;
+    overflow: hidden;
+    border-right: 1px solid #fff;
+}
+
+.audiojs p {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.audiojs .play {
+    display: block;
+}
+
+.audiojs .scrubber {
+    position: relative;
+    float: left;
+    width: calc(100% - 90px);
+    background: #fff;
+    height: 40px;
+    margin: 10px;
+    border-top: 1px solid #DD7F50;
+    border-left: 0px;
+    border-bottom: 0px;
+    overflow: hidden;
+}
+
+.audiojs .progress {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 0px;
+    background: #ED7F50;
+    z-index: 1;
+    background-image: none;
+}
+
+.audiojs .loaded {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 40px;
+    width: 0px;
+    background: #d3d3d3;
+    background-image: none;
+}
+
+.audiojs .time {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    margin: 0px 0px 0px 6px;
+    padding: 0px 6px 0px 12px;
+    border-left: none;
+    color: #fff;
+    text-shadow: none;
+}
+
+.audiojs .time em {
+    padding: 0px 2px 0px 0px;
+    color: #f9f9f9;
+    font-style: normal;
+}
+
+.audiojs .time strong {
+    padding: 0px 0px 0px 2px;
+    font-weight: normal;
+}
+
+.audiojs .error-message {
+    float: left;
+    display: none;
+    margin: 0px 10px;
+    height: 36px;
+    width: 400px;
+    overflow: hidden;
+    line-height: 36px;
+    white-space: nowrap;
+    color: #fff;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    -icab-text-overflow: ellipsis;
+    -khtml-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+}
+
+.audiojs .error-message a {
+    color: #eee;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid #999;
+    white-space: wrap;
+}
+
+.audiojs .play {
+    background: url('../img/play.png');
+    background-size:cover;
+}
+
+.audiojs .loading {
+    background: url('http://gifyo.com/public/img/loading.gif');
+    background-size:cover;
+}
+
+.audiojs .error {
+    background: url('../img/alert.png');
+    background-size:cover;
+}
+
+.audiojs .pause {
+    background: url('../img/pause.png');
+    background-size:cover;
+}
+
+.playing .play, .playing .loading, .playing .error {
+    display: none;
+}
+
+.playing .pause {
+    display: block;
+}
+
+.loading .play, .loading .pause, .loading .error {
+    display: none;
+}
+
+.loading .loading {
+    display: block;
+}
+
+.error .time, .error .play, .error .pause, .error .scrubber, .error .loading {
+    display: none;
+}
+
+.error .error {
+    display: block;
+}
+
+.error .play-pause p {
+    cursor: auto;
+}
+
+.error .error-message {
+    display: block;
+}
